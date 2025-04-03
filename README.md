@@ -14,8 +14,8 @@ Several important stages are highlighted:
 4. Local maxima extraction - final skeletonization
 5. Obtaining conclusions based on the skeleton dispersion with respect to the heater mask
 ![picture loading error](./C++/output_images/Image_with_Squares.jpg)
-![picture loading error](./C++/output_images/dist_transform.jpg)
-![picture loading error](./C++/output_images/python_utils/RESULTS/own/Sobel_comparison.jpg)
+![picture loading error](./C++/output_images/Distance_Transform_Image_custom.jpg)
+![picture loading error](./python_utils/RESULTS/own/Sobel_comparison.jpg)
 ![picture loading error](./C++/output_images/Final_skeleton.jpg)
 
 
