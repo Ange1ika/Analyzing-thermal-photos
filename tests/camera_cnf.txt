@@ -1,0 +1,80 @@
+Driver Info:
+	Driver name      : uvcvideo
+	Card type        : USB Camera: USB Camera
+	Bus info         : usb-0000:00:14.0-3
+	Driver version   : 6.11.11
+	Capabilities     : 0x84a00001
+		Video Capture
+		Metadata Capture
+		Streaming
+		Extended Pix Format
+		Device Capabilities
+	Device Caps      : 0x04200001
+		Video Capture
+		Streaming
+		Extended Pix Format
+Media Driver Info:
+	Driver name      : uvcvideo
+	Model            : USB Camera: USB Camera
+	Serial           : 200901010001
+	Bus info         : usb-0000:00:14.0-3
+	Media version    : 6.11.11
+	Hardware revision: 0x00001303 (4867)
+	Driver version   : 6.11.11
+Interface Info:
+	ID               : 0x03000002
+	Type             : V4L Video
+Entity Info:
+	ID               : 0x00000001 (1)
+	Name             : USB Camera: USB Camera
+	Function         : V4L2 I/O
+	Flags            : default
+	Pad 0x01000007   : 0: Sink
+	  Link 0x02000010: from remote pad 0x100000a of entity 'Extension 4' (Video Pixel Formatter): Data, Enabled, Immutable
+Priority: 2
+Video input : 0 (Camera 1: ok)
+Format Video Capture:
+	Width/Height      : 256/192
+	Pixel Format      : 'YUYV' (YUYV 4:2:2)
+	Field             : None
+	Bytes per Line    : 512
+	Size Image        : 98304
+	Colorspace        : sRGB
+	Transfer Function : Rec. 709
+	YCbCr/HSV Encoding: ITU-R 601
+	Quantization      : Default (maps to Limited Range)
+	Flags             : 
+Crop Capability Video Capture:
+	Bounds      : Left 0, Top 0, Width 256, Height 192
+	Default     : Left 0, Top 0, Width 256, Height 192
+	Pixel Aspect: 1/1
+Selection Video Capture: crop_default, Left 0, Top 0, Width 256, Height 192, Flags: 
+Selection Video Capture: crop_bounds, Left 0, Top 0, Width 256, Height 192, Flags: 
+Streaming Parameters Video Capture:
+	Capabilities     : timeperframe
+	Frames per second: 25.000 (25/1)
+	Read buffers     : 0
+
+User Controls
+
+                     brightness 0x00980900 (int)    : min=-64 max=64 step=1 default=0 value=0
+                       contrast 0x00980901 (int)    : min=0 max=100 step=1 default=50 value=50
+                     saturation 0x00980902 (int)    : min=0 max=100 step=1 default=64 value=64
+                            hue 0x00980903 (int)    : min=-180 max=180 step=1 default=0 value=0
+        white_balance_automatic 0x0098090c (bool)   : default=1 value=1
+                          gamma 0x00980910 (int)    : min=100 max=500 step=1 default=300 value=300
+           power_line_frequency 0x00980918 (menu)   : min=0 max=2 default=1 value=1 (50 Hz)
+				0: Disabled
+				1: 50 Hz
+				2: 60 Hz
+      white_balance_temperature 0x0098091a (int)    : min=2800 max=6500 step=10 default=4600 value=4600 flags=inactive
+                      sharpness 0x0098091b (int)    : min=0 max=100 step=1 default=50 value=50
+         backlight_compensation 0x0098091c (int)    : min=0 max=1 step=1 default=0 value=0
+ioctl: VIDIOC_ENUM_FMT
+	Type: Video Capture
+
+	[0]: 'YUYV' (YUYV 4:2:2)
+		Size: Discrete 256x192
+			Interval: Discrete 0.040s (25.000 fps)
+		Size: Discrete 256x384
+			Interval: Discrete 0.040s (25.000 fps)
