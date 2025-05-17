@@ -25,9 +25,9 @@ The main folder **“C++”** contains scripts with basic logic of image process
 ---
 
 <p align="center">
-  <img src="./General_C/output_images/Image_with_Squares.jpg" alt="picture loading error" width="30%" />
-  <img src="./General_C/output_images/Final_skeleton.jpg" alt="picture loading error" width="30%" />
-  <img src="./General_C/output_images/Distance_Transform_Image_custom.jpg" alt="picture loading error" width="30%" />
+  <img src="./General_C/DATA/Image_with_Squares.jpg" alt="picture loading error" width="30%" />
+  <img src="./General_C/DATA/Final_skeleton.jpg" alt="picture loading error" width="30%" />
+  <img src="./General_C/DATA/Distance_Transform_Image_custom.jpg" alt="picture loading error" width="30%" />
 </p>
 
 ---
@@ -51,3 +51,10 @@ The following are the results of different algorithms used in the project:
 | Zhang-Suen thinning algorithm           | 0.101661 seconds      |
 
 It's a straightforward algorithm, which is also realized to obtain thermal photos based on digital photos.
+
+### Algorithms of thermo adn RGB processing 
+<p align="center">
+  <img src="./General_C/DATA/algorithms/RGB_algo.png" alt="RGB-based algorithm" width="45%" style="margin-right: 2%;" />
+  <img src="./General_C/DATA/algorithms/thermo.png" alt="Thermal image" width="45%" />
+</p>
+
