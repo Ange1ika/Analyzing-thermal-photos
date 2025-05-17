@@ -73,8 +73,6 @@ void processImage(const string& input_path, const string& output_path) {
     Mat sobel_stack;
     hconcat(std::vector<Mat>{abs_grad_x1, abs_grad_y1, abs_grad_xy1}, sobel_stack);
 
-    // Сохраняем
-
     cv::Mat kernel_ = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(3, 3));
     cv::Mat closed_;
     cv::morphologyEx(sum_grad_xy, closed_, cv::MORPH_CLOSE, kernel_);
@@ -165,12 +163,12 @@ void processImage(const string& input_path, const string& output_path) {
 
     threshold(dist_skel, dist_skel_bin, mean_distance+5, 255, THRESH_BINARY);
 
-    cv::Mat binary_img_bgr;
-    Mat custom_skel;
-    zhang_suen_thinning(binary_img, custom_skel);
+    // cv::Mat binary_img_bgr;
+    // Mat custom_skel;
+    // zhang_suen_thinning(binary_img, custom_skel);
 
     // Поиск локальных максимумов скелета
-    custom_skel.convertTo(custom_skel, CV_32F);
+    //custom_skel.convertTo(custom_skel, CV_32F);
     Mat skeleton_line = Mat::zeros(dist_skel_custom.size(), CV_8UC1);
 
     for (int y = 1; y < dist_skel_custom.rows - 1; y++) {
@@ -200,7 +198,7 @@ void processImage(const string& input_path, const string& output_path) {
     Mat closed_skel_;
     cv::morphologyEx(skeleton_line, closed_skel_, MORPH_CLOSE, kernel_skel);
 
-    cvtColor(binary_img, binary_img_bgr, cv::COLOR_GRAY2BGR);
+    //cvtColor(binary_img, binary_img_bgr, cv::COLOR_GRAY2BGR);
 
     // Удваиваем среднее расстояние для поиска больших значений
     double threshold_dist = 2.2 * mean_distance;
@@ -210,7 +208,7 @@ void processImage(const string& input_path, const string& output_path) {
         for (int x = 1; x < dist_skel.cols - 1; x++) {
             if (dist_skel.at<float>(y, x) > threshold_dist) {
                 int square_side = 10; 
-                cv::rectangle(binary_img_bgr, cv::Point(x, y), cv::Point(x + square_side, y + square_side), cv::Scalar(0, 0, 255), -1);
+                cv::rectangle(closed_skel_, cv::Point(x, y), cv::Point(x + square_side, y + square_side), cv::Scalar(0, 0, 255), -1);
             }
         }
     }
@@ -224,8 +222,6 @@ void processImage(const string& input_path, const string& output_path) {
     imwrite(output_path + "/" + stem + "_sobel.jpg", sum_grad_xy);
     imwrite(output_path + "/" + stem + "_bilateral.jpg", bilateral_filtered);
     imwrite(output_path + "/" + stem + "_dist_transform.jpg", dist_skel_custom_bgr);
-    imwrite(output_path + "/" + stem + "_skeleton.jpg", custom_skel);
-    imwrite(output_path + "/" + stem + "_result.jpg", binary_img_bgr);
     imwrite(output_path + "/" + stem + "sobel_stack.jpg", sobel_stack);
 
 }

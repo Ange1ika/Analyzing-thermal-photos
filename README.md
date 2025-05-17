@@ -25,9 +25,9 @@ The main folder **“C++”** contains scripts with basic logic of image process
 ---
 
 <p align="center">
-  <img src="./C++/output_images/Image_with_Squares.jpg" alt="picture loading error" width="30%" />
-  <img src="./C++/output_images/Final_skeleton.jpg" alt="picture loading error" width="30%" />
-  <img src="./C++/output_images/Distance_Transform_Image_custom.jpg" alt="picture loading error" width="30%" />
+  <img src="./General_C/output_images/Image_with_Squares.jpg" alt="picture loading error" width="30%" />
+  <img src="./General_C/output_images/Final_skeleton.jpg" alt="picture loading error" width="30%" />
+  <img src="./General_C/output_images/Distance_Transform_Image_custom.jpg" alt="picture loading error" width="30%" />
 </p>
 
 ---
