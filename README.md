@@ -52,9 +52,9 @@ The following are the results of different algorithms used in the project:
 
 It's a straightforward algorithm, which is also realized to obtain thermal photos based on digital photos.
 
-### Algorithms of thermo adn RGB processing 
+### Algorithms of thermo and RGB processing 
 <p align="center">
    <img src="./General_C/DATA/algorithms/thermo.png" alt="Thermal image" width="60%" />
-  <img src="./General_C/DATA/algorithms/RGB_algo.png" alt="RGB-based algorithm" width="35%"" />
+  <img src="./General_C/DATA/algorithms/RGB_algo.png" alt="RGB-based algorithm" width="34%"" />
 </p>
 
