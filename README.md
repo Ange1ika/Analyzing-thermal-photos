@@ -54,7 +54,7 @@ It's a straightforward algorithm, which is also realized to obtain thermal photo
 
 ### Algorithms of thermo adn RGB processing 
 <p align="center">
-  <img src="./General_C/DATA/algorithms/RGB_algo.png" alt="RGB-based algorithm" width="45%" style="margin-right: 2%;" />
-  <img src="./General_C/DATA/algorithms/thermo.png" alt="Thermal image" width="45%" />
+   <img src="./General_C/DATA/algorithms/thermo.png" alt="Thermal image" width="45%" />
+  <img src="./General_C/DATA/algorithms/RGB_algo.png" alt="RGB-based algorithm" width="45%"" />
 </p>
 
